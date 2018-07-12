@@ -1,0 +1,44 @@
+
+
+<p class="p_search">These are search results for --- <mark> <%= params[:search_text] %></mark></p>
+
+
+<div class="container py-5 lessons_container">
+  <div class="row">
+    <div class="col-lg-12 lesson_head_font text-center">
+      Lessons Main
+    </div>
+  </div>
+  <% @lessons.each do |lesson| %>
+    <div class="row mx-auto">
+      <div class="col-lg-12 text-center lesson_padding"><a href="<%= root_path %>">
+          <%= lesson.name %></a>
+      </div>
+    </div>
+    <div class="row mx-auto py-1">
+      <div class="col-lg-12 text-center">
+        <%= lesson.description %>
+      </div>
+    </div>
+
+    <pre data-enlighter-language="<%=lesson.language.name %>">
+      <%= lesson.syntax %>
+    </pre>
+    <div class="row mx-auto-py-1">
+      <div class="col-lg-12 text-center">
+
+      
+      </div>
+    </div>
+<!--
+    <div class="row mx-auto">
+      <div class="col-lg-12 text-center">
+        <= link_to 'Go to Lesson', lesson_path(lesson), method: :delete %>
+      </div>
+    </div>
+-->
+
+  <% end %>
+ 
+</div>
+

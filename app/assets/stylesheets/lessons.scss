@@ -1,0 +1,76 @@
+// Place all the styles related to the Lessons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.lesson_edit_head_font {
+    color: #7878d2;
+    font-size: 40px;
+}
+
+.lessons_container {
+    font-size: 25px;
+    box-shadow: 3px 3px 5px 4px lightgrey;
+    border-radius: 10px;
+    background-color: #2e5825;
+    color: white;
+    border: 10px solid white;
+    width: 50%;
+
+}
+
+.lesson_padding {
+    padding-top: 25px;
+}
+
+.lesson_btn {
+    background-color: #7878d2;
+    box-shadow: 2px 2px 3px #9e8989;
+    box-sizing: border-box;
+    border: 1px solid #d2cfcf;
+}
+
+.lesson_btn:hover {
+    color: white;
+}
+
+.lesson_input {
+    box-shadow: 1px 1px 2px grey;
+    border: 3px solid #7878d2;
+    box-sizing: border-box;
+}
+
+.lesson_head_font {
+    color: whitesmoke;
+    font-size: 40px;
+
+}
+
+.lesson_select {
+    background-color: #7878d2;
+    width: 15%;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.p_search {
+    margin-left: 15px;
+}
+
+
+a.editNDelete {
+    color: white;
+}
+
+.editNDelete:hover {
+    text-decoration: none;
+    color: #b9ccd2;
+}
+
+.lessons_container2 {
+
+    border: 10px solid #7878d2;
+    box-shadow: 1px 1px 1px 3px lightgrey;
+    border-radius: 9px;
+    width: 50%;
+}

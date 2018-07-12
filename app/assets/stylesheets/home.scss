@@ -1,0 +1,181 @@
+// Place all the styles related to the Home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.media1 {
+    display: none;
+    margin: auto;
+    width: 90%;
+}
+
+form.form {
+    margin: 0 auto;
+}
+
+.h1 {
+    text-align: center;
+}
+
+a.list-group-item-success {
+    text-align: center;
+    font-size: 30px;
+}
+
+.list-group-item-action:hover {
+
+    //    color: whitesmoke;
+    background-color: #d1e0e0;
+
+}
+
+.list-group-item-action:focus {
+    background-color: #2779b9c7;
+}
+
+a.language {
+    padding-left: 15px;
+    font-size: 16px;
+    font-weight: 600;
+
+}
+
+a.language:hover {
+    color: whitesmoke;
+    background-color: #2779b9;
+}
+
+.navbar {
+    background-color: #2e5825;
+    box-shadow: 1px 3px 4px #000000cf;
+    border: 1px solid #83a188;
+    box-sizing: border-box;
+}
+
+
+.navbar-brand {
+    color: whitesmoke !important;
+    text-shadow: 1px 1px #000000b0;
+}
+
+.navbar-brand:hover {
+    color: #90ee9066 !important;
+}
+
+.form {
+
+    margin: 0 auto;
+}
+
+.form-group label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.code-buds-example {
+    background-color: #f1f1f1;
+    padding: 0.01em 16px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+
+.comment_tag {
+    font-size: 30px;
+    color: #fff;
+    background-color: #2e5825;
+    border-color: #007bff;
+    padding: 0.75rem 1.25rem;
+    text-decoration: none;
+}
+
+.comment_tag:hover {
+    color: whitesmoke;
+    background-color: #2779b9c7;
+    text-decoration: none;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+.innerbox {
+
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.preview {
+    border: 1px solid #ccc;
+}
+
+.your-result {
+    columns: 1;
+    rows: 1;
+    border: 1px solid purple;
+    width: 400px;
+    height: 400px;
+    margin-left: 250px;
+
+}
+
+.your-code {
+    margin-left: 180px;
+    border: 1px solid orange;
+}
+
+.your-styles {
+    border: 1px solid orange;
+}
+
+.list-group {
+    box-shadow: 1px 2px 5px #a9b7a6;
+}
+
+.comment-div:nth-child(even) {
+    background-color: #f0f0f5;
+    padding: 10px;
+}
+
+.comment-div:nth-child(odd) {
+    background-color: #e0ebeb;
+    padding: 10px;
+}
+
+ .preview {
+   border: 1px solid #ccc;
+ }
+
+ .your-result {
+   columns: 1;
+   rows: 1;
+   border-radius: 5px;
+   border: 1px solid #2e5726;
+   background-color: #c3e6cb;
+   width: 700px;
+   height: 150px;
+   margin-left: 250px;
+ }
+ .your-code {
+   margin-left: 180px;
+   border-radius: 5px;
+   border: 1px solid #c3e6cb;
+   padding: 10px;
+
+ }
+ .your-styles {
+   padding: 10px;
+   border-radius: 5px;
+   border: 1px solid #c3e6cb;
+ }
+ .list-group {
+   box-shadow: 1px 2px 5px #a9b7a6;
+ }
+
+
+.descriptionText {
+  text-align: center;
+  color: #f4f4f4;
+  background-color: #2e5825;
+  border-radius: 5px;
+}
+
+ .box-shadow{
+   box-shadow: 1px, 1px, 1px, 3px;
+   background-color: whitesmoke;
+ }

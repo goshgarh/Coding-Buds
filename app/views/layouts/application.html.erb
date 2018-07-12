@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CodingBuds</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body class="<%= "#{controller_name} #{action_name}" %>">
+
+  <nav class="navbar navbar-light">
+  <a href="<%= root_path %>" class="navbar-brand" style="font-family: 'Lobster', cursive; font-size: 50px;" title="Go to Home Page"><i class="fas fa-cog fa-spin"></i>Coding Buds</a>
+  <%= form_tag '/lessons/search', method: "GET" do %>
+      <%= text_field_tag :search_text, "", class:'searchText' %>
+      <%= submit_tag "Search", class:"searchButton btn text-center" %>
+  <% end %>
+
+
+ <!--
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <a href="<= admins_path %>">Search Link</a>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+-->
+</nav>
+   <br>
+   <%=custom_bootstrap_flash %>
+
+    <%= yield %>
+<footer>
+    
+    <p> &copy; Coding Buds</p>
+</footer>
+
+  </body>
+</html>

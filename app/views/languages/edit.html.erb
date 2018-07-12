@@ -1,0 +1,37 @@
+<div class="container py-5 new_language_container">
+  <div class="row">
+    <div class="col-lg-12 text-center language_secondary_font">
+      <h1>
+        Edit Language
+      </h1>
+    </div>
+  </div>
+
+  <%= form_for @language do |f| %>
+  <div class="row mx-auto justify-content-center">
+    <div class="col-lg-6">
+      <%=f.label :name %>
+      <%= f.text_field :name, class:'form-control language_input' %>
+    </div>
+  </div>
+  <div class="row mx-auto justify-content-center">
+    <div class="col-lg-6">
+      <%= f.label :description %>
+      <%= f.text_field :description, class:'form-control language_input'%>
+    </div>
+  </div>
+
+  <div class="row mx-auto justify-content-center">
+    <div class="col-lg-12 text-center py-2">
+      <%= f.submit 'Edit Language', class:'btn language_btn' %>
+    </div>
+  </div>
+
+<% end %>
+
+</div>
+<div class="row mx-auto">
+<div class="col-lg-12 text-center">
+  <%= render 'admins/shared/adminlinks' %>
+</div>
+</div>

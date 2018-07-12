@@ -1,0 +1,35 @@
+<body>
+    
+
+<h4><a href="<%= root_path %>">Go Home</a></h4>
+
+
+
+<!--These are helper  new_path and new_url-->
+
+                     <h4> All Comments</h4>
+                      <% @comments.each do |my_comment| %>
+                           
+
+                               <ul>
+                                   <li> Lesson Name <%= my_comment.lesson.name %></li>
+                                   <li> Subject <%= my_comment.subject %></li>
+                                   <li> Description <%= my_comment.description %></li>
+
+
+                               </ul>
+
+
+
+                     <% end %>
+
+    </body>
+
+
+
+
+
+
+
+
+

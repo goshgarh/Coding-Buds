@@ -1,0 +1,31 @@
+<div class="container new_language_container py-5">
+  <div class="row">
+    <div class="col-lg-12 text-center language_secondary_font">
+      <h1>
+        Create A New Language
+      </h1>
+    </div>
+  </div>
+  <%= form_for @language do |f| %>
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <%= f.label :name %>
+      <%= f.text_field :name, class:'form-control language_input' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <%= f.label :description %>
+      <%= f.text_field :description, class:'form-control language_input' %>
+    </div>
+  </div>
+
+  <div class="row mx-auto">
+    <div class="col-lg-12 text-center py-2">
+      <%=f.submit 'Create New Language', class:'btn language_btn' %>
+    </div>
+
+  </div>
+<% end %>
+
+</div>

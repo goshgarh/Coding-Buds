@@ -1,0 +1,37 @@
+<div class="container py-5 languages_container">
+  <div class="row mx-auto">
+    <div class="col-lg-12 text-center py-3 language_head_font">
+      <h1>Languages Main Base
+      </h1>
+    </div>
+  </div>
+
+  <% @languages.each do |language| %>
+    <div class="row mx-auto">
+      <div class="col-lg-12 text-center language_padding">
+
+        <%=language.name %>
+      </div>
+    </div>
+    <div class="row mx-auto py-1">
+      <div class="col-lg-12 text-center">
+
+        <%= language.description %>
+      </div>
+    </div>
+    <div class="row mx-auto py-1 rowHover">
+      <div class="col-lg-12 text-center">
+        <%= link_to 'Edit Language', edit_language_path(language), class:'editNDelete' %>
+        |
+
+        <%= link_to 'Delete Language', language_path(language), method: :delete, class:'editNDelete' %>
+      </div>
+    </div>
+  <% end %>
+  <div class="row mx-auto py-1">
+    <div class="col-lg-12 text-center">
+      <%= render 'admins/shared/adminlinks' %>
+    </div>
+  </div>
+
+</div>

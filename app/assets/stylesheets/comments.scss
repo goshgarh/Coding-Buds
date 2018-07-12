@@ -1,0 +1,26 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.btn-primary {
+    padding: 10px;
+    background-color: #2e5825;
+    border-color: #2e5825;
+    font-size: 1.2em;
+}
+
+.btn-primary:hover {
+    cursor: pointer;
+}
+
+#comment_lesson_id {
+    padding: 5px 20px;
+}
+
+.my_sel {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+h3 {
+    text-align: center;
+}

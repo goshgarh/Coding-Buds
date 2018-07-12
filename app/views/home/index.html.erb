@@ -1,0 +1,91 @@
+<body>
+
+    <div class="row">
+      <div class="col-2">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item-success list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>
+          <% @languages.each do |language| %>
+            <a class="list-group-item list-group-item-action language" id="list-<%= language.name.delete(" ") %>-list" data-toggle="list" href="#list-<%= language.name.delete(" ") %>" role="tab" aria-controls="<%= language.name.delete(" ") %>">
+              <i class="fa fa-code fa-2x fa-pull-left" aria-hidden="true"></i><%= language.name.delete(" ") %></a>
+            <% language.lessons.each do |lesson| %>
+              <a class="list-group-item list-group-item-action" id="list-<%= lesson.name.delete(" ") %>-list" data-toggle="list" href="#list-<%= lesson.name.delete(" ") %>" role="tab" aria-controls="<%= lesson.name.delete(" ") %>">
+                <%= lesson.name %></a>
+
+            <% end %>
+
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-10">
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">Home Home ipsum dolor sit amet, consectetur adipisicing elit. Amet, perspiciatis iure qui porro, quaerat esse fugit ipsam minima eveniet magnam
+            temporibus? Cupiditate quam pariatur fugit sapiente iusto laudantium ab illum consectetur nihil et, sequi numquam explicabo, architecto quae voluptatem a omnis libero, minima aperiam. Odit aliquam molestiae beatae velit iure consequatur ex voluptas
+            obcaecati impedit. At, ad dolorem aut voluptas nulla obcaecati reprehenderit modi. Accusantium modi placeat voluptatum eum hic eveniet minus sequi ullam maiores praesentium, aut beatae labore eligendi officia dicta cum autem, esse, blanditiis veniam!
+            Sit minus magni inventore ratione est numquam, eum, ex repellat. Iure maxime, voluptatem.</div>
+          <% @languages.each do |language| %>
+            <div class="tab-pane fade" id="list-<%= language.name.delete(" ") %>" role="tabpanel" aria-labelledby="list-<%= language.name.delete(" ") %>-list"><%= language.description %>
+            </div>
+
+            <% language.lessons.each do |lesson| %>
+              <div class="tab-pane fade" id="list-<%= lesson.name.delete(" ") %>" role="tabpanel" aria-labelledby="list-<%= lesson.name.delete(" ") %>-list">
+                <h4><%= lesson.description %></h4>
+                <pre data-enlighter-language="<%=lesson.language.name.delete(" ") %>">
+                <%= lesson.syntax %>
+              </pre>
+              <textarea class="your-code" cols="30" row="10" placeholder="Enter HTML Here"></textarea>
+              <textarea class="your-styles" cols="30" row="10" placeholder="Enter CSS Here"></textarea>
+              <div class="your-result"></div>
+              <style class="style-result"></style>
+              </div>
+            <% end %>
+          <% end %>
+
+        </div>
+        <!-- Endo of <div class="tab-content" id="nav-tabContent">-->
+      </div>
+      <!-- Endo of <div class="col-8">-->
+    </div>
+    <!-- End of <div class="row">-->
+    <br>
+
+     <% @lessons.each do |lesson| %>
+       <div class="media1 list-<%= lesson.name.delete(" ") %>-list">
+         <!-- <img class="mr-3" src="comments64.png" alt="Generic placeholder image">-->
+
+         <% lesson.comments.each_with_index do |comment, index| %>
+           <div class="comment-div">
+               <%= image_tag image_path(@imgs[index % @imgs.length]), alt: 'My comment', class: "mr-3" %>
+               <div class="media-body list-<%= comment.subject.delete(" ") %>-list">
+                 <h5 class="mt-0"><%= comment.subject %></h5>
+                 <p><%= comment.description %></p>
+               </div>
+           </div>
+         <% end %>
+      </div>
+         <% end %>
+
+    <br>
+
+    <div class="col-12 text-center">
+      <%=link_to 'Create Comment for Lesson', new_comment_path, class: "comment_tag" %>
+    </div>
+    <br>
+
+<!--
+    <form class="form col-lg-6 col-md-8">
+      <div class="form-group">
+        <label for="formGroupExampleInput">Submit Comments</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Subject">
+      </div>
+      <div class="form-group">
+         <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="comments"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form> -->
+
+
+  </body>
+
+</html>

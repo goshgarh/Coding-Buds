@@ -1,0 +1,62 @@
+// Place all the styles related to the Languages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.languages_container {
+  font-size: 25px;
+  box-shadow: 3px 3px 5px 4px lightgrey;
+  border-radius: 10px;
+  background-color: #7878d2;
+  color: white;
+  border:10px solid white;
+  width: 50%;
+}
+
+.language_padding {
+  padding-top: 25px;
+}
+
+.language_btn {
+  background-color: #7878d2;
+box-shadow: 2px 2px 3px #9e8989;
+      box-sizing: border-box;
+    border: 1px solid #d2cfcf;
+}
+
+.language_btn:hover {
+  color: white;
+}
+
+.language_input {
+  box-shadow: 1px 1px 2px grey;
+    border: 3px solid #7878d2;
+    box-sizing: border-box;
+}
+
+.language_head_font {
+  color: white;
+}
+
+.language_secondary_font {
+  color:#7878d2;
+}
+
+.new_language_container {
+border: 10px solid #7878d2;
+box-shadow: 1px 1px 1px 3px lightgrey;
+border-radius: 9px;
+width: 50%;
+}
+
+a.editNDelete {
+  color: white;
+}
+.editNDelete:hover {
+  text-decoration: none;
+  color: #b9ccd2;
+}
+
+.rowHover:hover {
+  border-radius: 5px;
+background-color: #414198;
+}

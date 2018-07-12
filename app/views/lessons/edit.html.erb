@@ -1,0 +1,41 @@
+<div class="container py-5 lessons_container2">
+  <div class="row">
+    <div class="col-lg-12 text-center lesson_edit_head_font">
+      <h1>Edit Lesson
+      </h1>
+    </div>
+  </div>
+
+  <%= form_for @lesson do |f| %>
+  <div class="row mx-auto justify-content-center">
+    <div class="col-lg-6">
+      <%= f.label :name %>
+      <%= f.text_field :name, class:'form-control lesson_input' %>
+    </div>
+  </div>
+  <div class="row mx-auto justify-content-center">
+    <div class="col-lg-6">
+      <%= f.label :description %>
+      <%= f.text_field :description, class:'form-control lesson_input' %>
+    </div>
+  </div>
+  <div class='row mx-auto justify-content-center'>
+    <div class="col-lg-10">
+      <%= f.label :syntax %>
+      <%= f.text_area :syntax, class:'form-control lesson_input' %>
+    </div>
+  </div>
+
+  <div class="row mx-auto justify-content-center">
+    <div class="col-lg-12 text-center py-2 ">
+      <%= f.submit 'Edit Lesson', class:'lesson_btn btn' %>
+    </div>
+  </div>
+<% end %>
+
+<div class="row mx-auto">
+  <div class="col-lg-12 text-center">
+    <%= render 'admins/shared/adminlinks' %>
+  </div>
+</div>
+</div>

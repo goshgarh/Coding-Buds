@@ -1,0 +1,36 @@
+<div class="container admin_box_shadow">
+  <div class="row py-3">
+    <div class="col-lg-12">
+      <h1 class="admin_font text-center">Admin's Panel</h1>
+    </div>
+  </div>
+  <div>
+    <div class="row mx-auto py-1">
+      <div class="col-lg-12 text-center">
+        <%= link_to 'Languages Base', languages_path, class:'editNDelete' %>
+
+      </div>
+    </div>
+    <div class="row mx-auto py-1">
+      <div class="col-lg-12 text-center">
+        <%= link_to 'Create A Language', new_language_path, class:'editNDelete' %>
+      </div>
+    </div>
+
+    <div class="row mx-auto py-1">
+      <div class="col-lg-12 text-center">
+        <%= link_to 'Lessons Base', lessons_path, class: 'editNDelete' %>
+      </div>
+    </div>
+    <div class="row mx-auto py-1">
+      <div class="col-lg-12 text-center">
+        <%= link_to 'Create A Lesson', new_lesson_path, class:'editNDelete' %>
+      </div>
+    </div>
+    <div class="row mx-auto py-3">
+      <div class="col-lg-12 text-center">
+        <%= render 'admins/shared/adminlinks' %>
+      </div>
+    </div>
+  </div>
+</div>

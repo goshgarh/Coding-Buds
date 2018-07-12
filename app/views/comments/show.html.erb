@@ -1,0 +1,33 @@
+<h3>Course details</h3>
+
+  
+   
+<div>
+    Lesson: <%= @comment.lesson.name %>
+    
+</div>
+   
+   <div>
+    Name: <%= @comment.subject %>
+    
+</div>
+ 
+<div>
+    Description: <%= @comment.description %>
+    
+</div>
+   
+  
+  
+   <div>
+    Created: <%= @comment.created_at %>
+</div>
+   <div>
+    Updated: <%= @comment.updated_at %>
+</div>
+<div>
+    <a href="<%= comments_path %>">Go Back</a>
+</div>
+<div>
+    <a href="<%= new_comment_path %>">Go to New Course</a>
+</div>

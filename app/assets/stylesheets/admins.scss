@@ -1,0 +1,27 @@
+// Place all the styles related to the Admins controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.admin_font {
+  color: white;
+  padding-top: 20px;
+}
+
+.admin_box_shadow {
+  background-color: #7878d2;
+  border-radius: 9px;
+  font-size: 25px;
+  width: 50%;
+  border: 10px solid white;
+box-shadow: 1px 1px 1px 3px lightgrey;
+}
+
+
+a.editNDelete {
+  color: white;
+}
+.editNDelete:hover {
+  text-decoration: none;
+  color: #b9ccd2;
+}

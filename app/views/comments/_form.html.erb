@@ -1,0 +1,30 @@
+
+<%= form_for @comment do |f| %>
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <%= f.label :subject %>
+      <%= f.text_field :subject, class:'form-control' %>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="col-lg-6 mx-auto">
+      <%= f.label :description %>
+      <%= f.text_area :description, class:'form-control', :rows => 5 %>
+    </div>
+  </div>
+ <br>
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <%= f.label  :lesson_id, 'Choose Lesson ', class: 'my_sel' %>
+      <%= f.select :lesson_id, options_for_select(@lessons.map {|l|[l.name, l.id]}), class: 'my_sel' %>
+
+  </div>
+  
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-lg-6 mx-auto cr_comment">
+      <%=f.submit 'Create a Comment', class:'btn-primary' %>
+    </div>
+  </div>
+<% end %>
